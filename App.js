@@ -1,5 +1,4 @@
 import Expenses from "./components/Expenses/Expenses";
-import Card from "./components/UI/Card";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
@@ -25,12 +24,16 @@ function App() {
     },
   ];
 
+  const storeData = (data) => {
+    console.log(data);
+  }
+
   return (
-    <Card>
+    <div>
       <h2>Expense Manager</h2>
-      <NewExpense />
+      <NewExpense onDataReceive={storeData}/>
       <Expenses data={expenses}></Expenses>
-    </Card>
+    </div>
   );
 }
 
