@@ -5,6 +5,7 @@ const ExpenseForm = (props) => {
   const [EnteredTitle, setEnteredTitle] = useState("");
   const [EnteredDate, setEnteredDate] = useState("");
   const [EnteredAmount, setEnteredAmount] = useState("");
+  const [FormState, setFormState] = useState("closed");
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -23,22 +24,45 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: EnteredTitle,
-      amount: EnteredAmount,
+      amount: +EnteredAmount,
       date: new Date(EnteredDate),
     };
     props.onSubmitHandler(expenseData);
-    setEnteredAmount('');
-    setEnteredDate('');
-    setEnteredTitle('');
-
-
+    setEnteredAmount("");
+    setEnteredDate("");
+    setEnteredTitle("");
+    changeButtonState();
   };
+
+  const changeButtonState = () => {
+    if (FormState == "closed") {
+      setFormState("opened");
+    } else {
+      setFormState("closed");
+      setEnteredAmount("");
+      setEnteredDate("");
+      setEnteredTitle("");
+    }
+    // console.log("Changed state");
+  };
+
+  if (FormState == "closed") {
+    return (
+      <div className="new-expense__actions" style={{ textAlign: "center" }}>
+        <button onClick={changeButtonState}>Add New Expense</button>
+      </div>
+    );
+  }
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" value={EnteredTitle} onChange={titleChangeHandler} />
+          <input
+            type="text"
+            value={EnteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -61,8 +85,11 @@ const ExpenseForm = (props) => {
           />
         </div>
       </div>
-      <div className="new-expense__actions">
+      <div className="new-expense__actions" style={{ float: "right" }}>
         <button type="submit">Add Expense</button>
+      </div>
+      <div className="new-expense__actions">
+        <button onClick={changeButtonState}>Cancel</button>
       </div>
     </form>
   );

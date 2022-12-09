@@ -1,5 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+
 import { useState } from "react";
 
 const INITIAL_EXPENSES = [
@@ -14,7 +15,7 @@ const INITIAL_EXPENSES = [
     id: "003",
     title: "Car Insurance",
     amount: 294.67,
-    date: new Date(2019, 2, 28),
+    date: new Date(2020, 2, 28),
   },
   {
     id: "004",
@@ -36,8 +37,9 @@ function App() {
 
   return (
     <div>
-      <h2>Expense Manager</h2>
+      <h1 style={{ textAlign: "center", color: "white" }}>Expense Manager</h1>
       <NewExpense onDataReceive={storeData} />
+
       <Expenses data={expenses}></Expenses>
     </div>
   );
