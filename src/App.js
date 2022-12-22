@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
-
+import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 
 const INITIAL_EXPENSES = [
@@ -35,12 +35,14 @@ function App() {
     });
   };
 
+  document.title = "Expense Manager";
+
   return (
     <div>
       <h1 style={{ textAlign: "center", color: "white" }}>Expense Manager</h1>
       <NewExpense onDataReceive={storeData} />
-
       <Expenses data={expenses}></Expenses>
+      <Footer></Footer>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import "./ExpensesList.css";
-import { useLayoutEffect } from "react";
+// import { useLayoutEffect } from "react";
 import ExpenseItem from "./ExpenseItem";
 
 const ExpenseList = (props) => {
