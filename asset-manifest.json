@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React_Expense_Manager/static/css/main.a2308a1e.chunk.css",
+    "main.js": "/React_Expense_Manager/static/js/main.15b525d0.chunk.js",
+    "main.js.map": "/React_Expense_Manager/static/js/main.15b525d0.chunk.js.map",
+    "runtime-main.js": "/React_Expense_Manager/static/js/runtime-main.c9d30dba.js",
+    "runtime-main.js.map": "/React_Expense_Manager/static/js/runtime-main.c9d30dba.js.map",
+    "static/js/2.9007b708.chunk.js": "/React_Expense_Manager/static/js/2.9007b708.chunk.js",
+    "static/js/2.9007b708.chunk.js.map": "/React_Expense_Manager/static/js/2.9007b708.chunk.js.map",
+    "index.html": "/React_Expense_Manager/index.html",
+    "static/css/main.a2308a1e.chunk.css.map": "/React_Expense_Manager/static/css/main.a2308a1e.chunk.css.map",
+    "static/js/2.9007b708.chunk.js.LICENSE.txt": "/React_Expense_Manager/static/js/2.9007b708.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9d30dba.js",
+    "static/js/2.9007b708.chunk.js",
+    "static/css/main.a2308a1e.chunk.css",
+    "static/js/main.15b525d0.chunk.js"
+  ]
+}
