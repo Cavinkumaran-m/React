@@ -5,10 +5,9 @@ It covers most of the basic concepts of React like **components** handling and *
 It is hosted online at **[here](https://cavinkumaran-m.github.io/React_Expense_Manager/)**
 
 ### The Application's structure:
-1. App.js
-2. index.js
-3. index.css
-4. Components:
+1. App
+2. index
+3. Components:
    - Chart:
      - Chart
      - ChartBar
